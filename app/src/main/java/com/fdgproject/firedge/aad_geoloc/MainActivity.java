@@ -128,6 +128,7 @@ public class MainActivity extends Activity implements GoogleApiClient.Connection
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(receptor);
+        db.close();
     }
 
     private BroadcastReceiver receptor= new BroadcastReceiver() {
